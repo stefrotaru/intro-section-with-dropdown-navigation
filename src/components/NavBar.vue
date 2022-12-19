@@ -13,7 +13,7 @@
         <div class="navbar__paths__features dropdown">
           <button class="dropdown__btn">
             Features
-            <i class="fa fa-caret-down"></i>
+            <i class="fa-caret-down"></i>
           </button>
           <div class="dropdown__content">
             <a href="#">Todo List</a>
@@ -83,9 +83,8 @@ export default {
 <style scoped>
 .navbar {
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 1.5rem 2rem;
   overflow: hidden;
-  font-weight: 700;
 
   display: flex;
   align-items: center;
@@ -107,7 +106,7 @@ export default {
   flex: auto;
 }
 .navbar__paths {
-  padding-inline-start: 6rem;
+  padding-inline-start: 3.5rem;
 
   display: flex;
   gap: 3rem;
@@ -127,7 +126,6 @@ export default {
 }
 
 .dropdown .dropdown__btn, .btn {
-  font-weight: 700;
   font-size: 16px;
   color: hsl(0, 0%, 41%);
   border: none;
@@ -157,6 +155,30 @@ export default {
   display: block;
   text-align: left;
 }
+.navbar__paths__features .dropdown__content a:nth-child(1)::before {
+  content: url(../assets/icon-todo.svg);
+  padding: .5rem;
+  position: relative;
+  top: .1rem;
+}
+.navbar__paths__features .dropdown__content a:nth-child(2)::before {
+  content: url(../assets/icon-calendar.svg);
+  padding: .5rem;
+  position: relative;
+  top: .1rem;
+}
+.navbar__paths__features .dropdown__content a:nth-child(3)::before {
+  content: url(../assets/icon-reminders.svg);
+  padding: .5rem;
+  position: relative;
+  top: .1rem;
+}
+.navbar__paths__features .dropdown__content a:nth-child(4)::before {
+  content: url(../assets/icon-planning.svg);
+  padding: .5rem;
+  position: relative;
+  top: .1rem;
+}
 .dropdown__content a:hover {
   color: hsl(0, 0%, 8%);
 }
@@ -170,15 +192,24 @@ export default {
   gap: 3rem;
 }
 .register-btn {
-  border: .15rem solid hsl(0, 0%, 41%);
-  border-radius: 1rem;
-  padding: .6rem 1.2rem;
+  border: .1rem solid hsl(0, 0%, 41%);
+  border-radius: .75rem;
+  padding: .7rem 1.2rem;
 }
 .register-btn:hover {
   border: .15rem solid hsl(0, 0%, 8%);;
 }
 .navbar__paths > a:hover, .dropdown__btn:hover, .btn:hover {
   color: hsl(0, 0%, 8%);
+}
+
+i {
+  content: url(../assets/icon-arrow-down.svg);
+  position: relative;
+  bottom: 2px;
+}
+.dropdown:hover i {
+  content: url(../assets/icon-arrow-up.svg);
 }
 
 @media (max-width: 960px) {

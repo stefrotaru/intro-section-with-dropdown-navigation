@@ -1,16 +1,19 @@
 <template>
   <div class="app">
     <NavBar/>
+    <MainContent/>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
+import NavBar from './components/NavBar.vue';
+import MainContent from './components/MainContent/MainContent.vue';
 
 export default {
   name: 'App',
   components: {
     NavBar,
+    MainContent,
   }
 }
 </script>
@@ -31,12 +34,10 @@ html {
 }
 
 body {}
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.nav-bar {}
 </style>
