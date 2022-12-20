@@ -42,7 +42,11 @@ export default {
     background: black;
     color: white;
     font-size: 1.3rem;
-    padding: .8rem 1.6rem;
+    padding: 1rem 1.6rem;
+}
+.landing__btn:hover {
+    background: transparent;
+    color: black;
 }
 .landing__icons {
     height: 20px;
@@ -54,5 +58,45 @@ export default {
 }
 .landing__icons > img:nth-child(4) {
     height: 25px;
+}
+
+@media (max-width: 960px) {
+    .col-1 {
+        align-self: center;
+        text-align: center;
+        width: unset;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .landing__title {
+        padding-block-start: .5rem;
+        font-size: calc(1.5rem + 3vw);
+    } 
+    
+    .landing__description {
+        font-size: 1rem;
+    }
+
+    .landing__btn {
+        align-self: center;
+    }
+
+    .landing__icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .landing__icons > img {
+        height: calc(8px + 1.5vw);
+        width: auto;
+    }
+    .landing__icons > img:nth-child(2) {
+        height: calc(16px + 1.5vw);
+        width: auto;
+    }
+    .landing__icons > img:nth-child(4) {
+        height: calc(16px + 1.5vw);
+        width: auto;
+    }
 }
 </style>

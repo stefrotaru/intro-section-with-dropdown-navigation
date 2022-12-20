@@ -18,4 +18,13 @@ export default {
 .col-2 > img {
     height: 75vh;
 }
+
+@media (max-width: 960px) {
+    .col-2 > img {
+        content: url(../../assets/image-hero-mobile.png);
+        padding-block-start: 2rem;
+        width: 100%;
+        height: auto;
+    }
+}
 </style>

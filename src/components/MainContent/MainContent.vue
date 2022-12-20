@@ -29,4 +29,13 @@ export default {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
+
+@media (max-width: 960px) {
+    .container {
+        padding: unset;
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
 </style>

@@ -33,11 +33,12 @@ html {
   font-family: 'Epilogue', sans-serif;
 }
 
-body {}
+body {
+  background-color: #f9f9f9;
+}
 
 .app {
   display: flex;
   flex-direction: column;
 }
-.nav-bar {}
 </style>

@@ -5,7 +5,8 @@
     </a>
 
     <a href="#menu" class="navbar__menu-btn" @click="showMobileMenu = !showMobileMenu">
-      <img src="../assets/icon-menu.svg" alt="">
+      <img src="../assets/icon-menu.svg" alt="" v-if="!showMobileMenu">
+      <img src="../assets/icon-close-menu.svg" alt="" v-if="showMobileMenu">
     </a>
 
     <div class="paths-wrapper" id="menu" v-show="showMobileMenu">
@@ -139,10 +140,10 @@ export default {
 .dropdown__content {
   display: none;
   position: absolute;
+  padding: 1rem;
   border-radius: 10px;
   top: 4.5rem;
-  background-color: #f9f9f9;
-  width: 160px;
+  background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -197,7 +198,7 @@ export default {
   padding: .7rem 1.2rem;
 }
 .register-btn:hover {
-  border: .15rem solid hsl(0, 0%, 8%);;
+  border: .1rem solid hsl(0, 0%, 8%);;
 }
 .navbar__paths > a:hover, .dropdown__btn:hover, .btn:hover {
   color: hsl(0, 0%, 8%);
@@ -228,9 +229,9 @@ i {
     right: 0;
     top: 0;
     z-index: 2;
+    background-color: hsl(0, 0%, 98%);
 
     flex-direction: column;
-    background-color: hsl(0, 0%, 98%);
   }
 
   .navbar__menu-btn {
